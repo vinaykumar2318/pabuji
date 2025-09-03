@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Indian Painting</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Tale Of Pabuji</h1>
+
+    <div class="painting-container">
+        <img src="Phad.jpg" alt="Indian Painting" id="painting">
+
+        <div class="hotspot" style="top: 39%; left: 3.5%;" onclick="showPopup('Ravan')" data-label="Ravan"></div>
+        <div class="hotspot" style="top: 35%; left: 13%;" onclick="showPopup('Umarkot')" data-label="Umarkot"></div>
+        <div class="hotspot" style="top: 41%; left: 49%;" onclick="showPopup('Pabuji')" data-label="Pabuji"></div>
+        <div class="hotspot" style="top: 10%; left: 24.5%;" onclick="showPopup('Ramdev')" data-label="Ramdev"></div>
+        <div class="hotspot" style="top: 32%; left: 56%;" onclick="showPopup('Chando')" data-label="Chando"></div>
+        <div class="hotspot" style="top: 32%; left: 61%;" onclick="showPopup('Demaji')" data-label="Demaji"></div>
+        <div class="hotspot" style="top: 32%; left: 65%;" onclick="showPopup('Saliji')" data-label="Saliji"></div>
+        <div class="hotspot" style="top: 32%; left: 69%;" onclick="showPopup('Harmal')" data-label="Harmal"></div>
+        <div class="hotspot" style="top: 9%; left: 96%;" onclick="showPopup('Roopnath')" data-label="Roopnath"></div>
+        <div class="hotspot" style="top: 35%; left: 95.5%;" onclick="showPopup('Bhati')" data-label="Bhati"></div>
+        <div class="hotspot" style="top: 52%; left: 85%;" onclick="showPopup('Mirza')" data-label="Mirza"></div>
+        <div class="hotspot" style="top: 77%; left: 82%;" onclick="showPopup('Gujao')" data-label="Gujao"></div>
+        <div class="hotspot" style="top: 77%; left: 77%;" onclick="showPopup('Sati')" data-label="Sati"></div>
+        <div class="hotspot" style="top: 74%; left: 70%;" onclick="showPopup('Deval')" data-label="Deval"></div>
+        <div class="hotspot" style="top: 64%; left: 62%;" onclick="showPopup('Kesar')" data-label="Kesar"></div>
+        <div class="hotspot" style="top: 56%; left: 59.5%;" onclick="showPopup('Harmal_Jogi')" data-label="Harmal Jogi"></div>
+        <div class="hotspot" style="top: 56%; left: 57%;" onclick="showPopup('Roopnath')" data-label="Roopnath"></div>
+        <div class="hotspot" style="top: 78%; left: 26.5%;" onclick="showPopup('Demaji')" data-label="Demaji"></div>
+        <div class="hotspot" style="top: 58%; left: 16.5%;" onclick="showPopup('Wedding')" data-label="Wedding"></div>
+        <div class="hotspot" style="top: 25%; left: 27%;" onclick="showPopup('Pabuji')" data-label="Pabuji"></div>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="back-arrow" onclick="closePopup()">&#11013;</span>
+
+      <select id="language-select" onchange="translateContent()">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+        <option value="es">Español (Spanish)</option>
+        <option value="fr">Français (French)</option>
+        <option value="de">Deutsch (German)</option>
+        <option value="zh-CN">中文 (Simplified Chinese)</option>
+        <option value="zh-TW">繁體中文 (Traditional Chinese)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="ko">한국어 (Korean)</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="pt">Português (Portuguese)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="ur">اردو (Urdu)</option>
+        <option value="tr">Türkçe (Turkish)</option>
+        <option value="it">Italiano (Italian)</option>
+        <option value="vi">Tiếng Việt (Vietnamese)</option>
+        <option value="fa">فارسی (Persian/Farsi)</option>
+        <option value="id">Bahasa Indonesia (Indonesian)</option>
+      </select>
+
+      <video id="popup-video" controls autoplay loop></video>
+      <h2 id="popup-title"></h2>
+      <p id="popup-description"></p>
+      <audio id="popup-audio" controls></audio>
+      <div id="popup-music-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script src="https://translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

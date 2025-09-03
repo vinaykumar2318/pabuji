@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(1000deg, #F5E6D3, #C75C32);
+    color: #5A3E2B;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.painting-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: 8px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.hotspot {
+    position: absolute;
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(65, 63, 63, 0.8); 
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid white;  
+}
+
+.hotspot:hover {
+    transform: scale(1.5);
+    background: rgb(65, 63, 63, 0.8);
+}
+
+.hotspot::after {
+    content: attr(data-label);
+    position: absolute;
+    background: #4a3228;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s; 
+}
+
+.hotspot:hover::after {
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 0.3s ease, visibility 0s 0s; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.5); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(0.5); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); }
+    to { transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #4a3228;
+}
+
+.audio-container {
+    margin-top: 20px;
+}
+
+#play-pause {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #ff4500;
+    transition: width 0.1s;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(6px);     
+    justify-content: center;
+    align-items: flex-start;    
+    padding-top: 40px;             
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+}
+
+.popup-content {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    max-width: 800px;
+    width: 90%;
+    text-align: center; 
+    color: white;      
+}
+
+
+.popup-content video {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#popup-title {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+#popup-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#language-select {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 6px 10px;
+    font-size: 14px;  
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+    max-height: 120px;
+    overflow-y: auto; 
+}
+
+#popup-audio {
+    display: block;
+    margin: 10px auto; 
+}
+
+.has-music #popup-audio {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    margin: 0;
+}
+
+#popup-music-container {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #ede9e7;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+  text-shadow: 1px 0 currentColor;
+}
+
+.back-arrow:hover {
+  color: #e2dbd8;
+  font-size: xx-large;
+  font-weight: bolder;
+}
