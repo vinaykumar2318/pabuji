@@ -187,10 +187,15 @@ img {
 
 #popup-audio {
     display: block;
-    margin: 10px auto; 
+    margin: 10px auto;
+}
+
+:not(.has-music) #popup-audio {
+  padding: 50px;
 }
 
 .has-music #popup-audio {
+    padding: 0;
     position: absolute;
     bottom: 100px;
     left: 20px;

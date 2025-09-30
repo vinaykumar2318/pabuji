@@ -28,7 +28,8 @@ const paintingData = {
     Ramdev: {
         title: "Ramdev",
         description: "Baba Ramdev is a beloved local deity of Rajasthan, revered by numerous communities. A semi-mythical figure, he was a 15th-century Rajput ruler of the Tanwar dynasty, governing the region of Runicha near Pokaran. In the Pabuji epic, Baba Ramdev appears as a wandering Yogi and a key advisor to Roop, guiding him on his quest for family and revenge. He also attends Pabu's wedding as an honored guest, symbolizing his important role in the narrative and his spiritual influence in Rajasthan's folklore.",
-        audio: "./audio/Ramdev.mp3"
+        audio: "./audio/Ramdev.mp3",
+        video: "./videos/ramdevVid.mp4"
     },
     Chando: {
         title: "Chando",
@@ -68,7 +69,8 @@ const paintingData = {
         description: "Mirza Khan, the ruler of Patan, serves as a key antagonist in Pabuji's tales. Representing oppressive forces, he is portrayed as a tyrant responsible for cow slaughter but also as someone who upholds honor by pursuing blood-feuds (vair). His conflict with Pabu reflects themes of justice, moral leadership, and the protection of women and livestock, core values in Pabuji's legend. In a moment of redemption, Mirza Khan bathes in the sacred lake of Pushkar to cleanse himself of the sins of bloodshed, adding complexity to his character.",
         audio: "./audio/Mirza.mp3",
         music: "./music/Music_3.mp3",
-        musicLabel: "Special Mirza Khan Music"
+        musicLabel: "Special Mirza Khan Music",
+        video: "./videos/mirzaKhanVid.mp4"
     },
     Gujao: {
         title: "The Gujao's Well",
@@ -84,7 +86,7 @@ const paintingData = {
         title: "Deval",
         description: "Deval is one of the central female figures in the Pabuji epic, a powerful leader and skilled cattle herder. As an incarnation of the goddess Hinglaj, she embodies both divine and human qualities, capable of transforming into animals to aid in travel. Her loyalty to Pabuji is unwavering, always by his side as a trusted advisor and sisterly figure. Deval's dual role as a spiritual guide and political advisor underscores the blend of the divine and earthly in the narrative, with her mission ensuring that Pabuji fulfills his sacred duties.",
         audio: "./audio/Deval.mp3",
-        video: "./videos/devalVid.mp4"
+        video: "./videos/develVid.mp4"
     },
     Kesar: {
         title: "Kesar Kalmi",
