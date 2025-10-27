@@ -1,11 +1,9 @@
 [build]
-  publish = "."        # Folder to deploy (use "public" if your files are in /public)
-  command = ""         # No build command needed for plain HTML/JS
-
-[dev]
-  command = "npx serve ."  # Optional: for local preview
-  port = 8888
+  publish = "."
+  command = ""
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  enabled = false
+
+  [plugins.inputs]
+  disabled = true
