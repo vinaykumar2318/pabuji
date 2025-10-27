@@ -5,3 +5,7 @@
 [dev]
   command = "npx serve ."  # Optional: for local preview
   port = 8888
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  enabled = false
